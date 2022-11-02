@@ -10,9 +10,9 @@ import javax.persistence.Id;
 @Entity
 public class Cnpj {
 
-    @Id
     private String nomeFantasia;
     private String razaoSocial;
+    @Id
     private String cnpj;
     private String status;
     private String cnaePrincipalDescricao;
