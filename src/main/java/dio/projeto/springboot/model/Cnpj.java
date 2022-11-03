@@ -2,18 +2,16 @@ package dio.projeto.springboot.model;
 
 import java.util.HashMap;
 import java.util.Map;
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Generated("jsonschema2pojo")
 @Entity
 public class Cnpj {
 
-    private String nomeFantasia;
-    private String razaoSocial;
     @Id
     private String cnpj;
+    private String nomeFantasia;
+    private String razaoSocial;
     private String status;
     private String cnaePrincipalDescricao;
     private String cnaePrincipalCodigo;
@@ -29,7 +27,14 @@ public class Cnpj {
     private String bairro;
     private String municipio;
     private String uf;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
 
     public String getNomeFantasia() {
         return nomeFantasia;
@@ -45,14 +50,6 @@ public class Cnpj {
 
     public void setRazaoSocial(String razaoSocial) {
         this.razaoSocial = razaoSocial;
-    }
-
-    public String getCnpj() {
-        return cnpj;
-    }
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
     }
 
     public String getStatus() {
@@ -173,14 +170,6 @@ public class Cnpj {
 
     public void setUf(String uf) {
         this.uf = uf;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }
