@@ -10,7 +10,7 @@ public class Empresario {
     private Long id;
     private String nome;
     @ManyToOne
-    private Cnpj cnpj;
+    private Empresa empresa;
 
     public Long getId() {
         return id;
@@ -28,11 +28,11 @@ public class Empresario {
         this.nome = nome;
     }
 
-    public Cnpj getCnpj() {
-        return cnpj;
+    public Empresa getEmpresa() {
+        return empresa;
     }
 
-    public void setCnpj(Cnpj cnpj) {
-        this.cnpj = cnpj;
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
 }
